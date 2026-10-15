@@ -13,7 +13,7 @@
 
     <!-- Clickable GIF linking to the cat page -->
     <a href="website.html">
-<img src="darkbobby.gif" alt="misery" width="300">
+<img src="/darkbobby.gif" alt="misery" width="300">
     </a>
 
     <p>Click the GIF to meet my cat!</p>
