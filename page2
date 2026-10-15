@@ -12,8 +12,8 @@
     <p>This is the about page.</p>
 
     <!-- Clickable GIF linking to the cat page -->
-    <a href="cat.html">
-<img src="images/cat-dance.gif" alt="Click to visit the cat page" width="300">
+    <a href="website.html">
+<img src="darkbobby.gif" alt="misery" width="300">
     </a>
 
     <p>Click the GIF to meet my cat!</p>
