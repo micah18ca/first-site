@@ -126,7 +126,7 @@
     }
 
     .circle-4::after {
-      content: "hide in the washer/dryer";
+      content: "hide in the dryer";
     }
 
     .circle-5::after {
@@ -142,14 +142,53 @@
     <div class="map-wrap">
       <img src="images/house1.png">
 
-      <a class="circle circle-1" href="#circle-1" aria-label="hide under the bed"></a>
-      <a class="circle circle-2" href="#circle-2" aria-label="hide under the table"></a>
-      <a class="circle circle-3" href="#circle-3" aria-label="hide in the closet"></a>
-      <a class="circle circle-4" href="#circle-4" aria-label="hide in the washer/dryer"></a>
-      <a class="circle circle-5" href="#circle-5" aria-label="hide under the couch"></a>
+      <a
+        class="circle circle-1"
+        href="circle1.html"
+        data-circle="1"
+        aria-label="Circle 1">
+      </a>
+
+      <a
+        class="circle circle-2"
+        href="circle2.html"
+        data-circle="2"
+        aria-label="Circle 2">
+      </a>
+
+      <a
+        class="circle circle-3"
+        href="circle3.html"
+        data-circle="3"
+        aria-label="Circle 3">
+      </a>
+
+      <a
+        class="circle circle-4"
+        href="circle4.html"
+        data-circle="4"
+        aria-label="Circle 4">
+      </a>
+
+      <a
+        class="circle circle-5"
+        href="circle5.html"
+        data-circle="5"
+        aria-label="Circle 5">
+      </a>
     </div>
 
-    <img class="fatsagi" src="images/fatsagi.png" alt="he'll do it to you">
+    <img class="fatsagi" src="images/fatsagi.png">
   </div>
+
+  <script>
+    document.querySelectorAll(".circle").forEach((circle) => {
+      circle.addEventListener("click", () => {
+        const circleNumber = circle.dataset.circle;
+
+        localStorage.setItem("hidingSpot", circleNumber);
+      });
+    });
+  </script>
 </body>
 </html>
