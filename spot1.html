@@ -25,7 +25,7 @@
 
     .image-wrap {
       width: min(650px, 82vw);
-      margin: 0 auto 28px;
+      margin: 0 auto;
     }
 
     .map-wrap > img {
@@ -42,10 +42,30 @@
     }
 
     .continue-button {
-      position: fixed;
+      position: absolute;
       top: 50%;
-      right: 24px;
+      left: calc(50% + min(325px, 41vw) + 12px);
       transform: translateY(-50%);
+    }
+
+    .page-layout {
+      position: relative;
+      width: 100%;
+      padding: 0 24px 28px;
+    }
+
+    @media (max-width: 800px) {
+      .page-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .continue-button {
+        position: static;
+        transform: none;
+        margin-top: 16px;
+      }
     }
   </style>
 </head>
@@ -53,14 +73,16 @@
 <body>
   <h1>u chose to hide under the bed</h1>
 
-  <div class="image-wrap">
-    <div class="map-wrap">
-      <img src="images/house1_spot1.png">
+  <div class="page-layout">
+    <div class="image-wrap">
+      <div class="map-wrap">
+        <img src="images/house1_spot1.png">
+      </div>
+
+      <img class="fatsagi" src="images/fatsagi.png">
     </div>
 
-    <img class="fatsagi" src="images/fatsagi.png">
+    <button class="continue-button" type="button">continue</button>
   </div>
-
-  <button class="continue-button" type="button">continue</button>
 </body>
 </html>
